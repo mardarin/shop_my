@@ -1,6 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 p {
@@ -8,6 +13,7 @@ p {
 }
 
 html {
+	font-family: Helvetica, sans-serif;
 	font-size: 14px;
 }
 
@@ -48,4 +54,44 @@ h1 {
 
 h2 {
 	font-size: 1.5rem;	
+}
+
+a:link { 
+	color: #036; /* Цвет непосещенных ссылок */
+}
+a:visited { 
+	color: #606; /* Цвет посещенных ссылок */
+}
+a:hover { 
+	color: #f00; /* Цвет ссылок при наведении на них курсора мыши */
+}
+a:active { 
+	color: #ff0; /* Цвет активных ссылок */
+}
+
+.inp:focus {
+	color: red;
+}
+
+b:first-child {
+	color: red;
+}
+
+
+.foo:before { 
+	content: ".";
+	width: 20px;
+}
+
+.foo:after { 
+	content: "sdfsfsdfsdf";
+	/*width: 20px;*/
+}
+
+.foo:first-letter { 
+	color: red;
+}
+
+.foo:first-line {
+	font-style: italic;
 }
