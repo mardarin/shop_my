@@ -37,13 +37,6 @@ div.product {
 	width: 33%;
 }
 
-footer {
-	border: 1px solid red;
-	clear: both;
-	height: 150px;
-	padding: 50px 0px 0px 0px;
-}
-
 .em-width {
 	font-size: 0.8rem;
 }
@@ -56,42 +49,29 @@ h2 {
 	font-size: 1.5rem;	
 }
 
-a:link { 
-	color: #036; /* Цвет непосещенных ссылок */
-}
-a:visited { 
-	color: #606; /* Цвет посещенных ссылок */
-}
-a:hover { 
-	color: #f00; /* Цвет ссылок при наведении на них курсора мыши */
-}
-a:active { 
-	color: #ff0; /* Цвет активных ссылок */
+/*header*/
+
+nav ul li {
+	display: inline-block;
 }
 
-.inp:focus {
-	color: red;
+nav ul {
+	width: 30%;
+	float: left;
 }
 
-b:first-child {
-	color: red;
+header {
+	padding: 20px;
 }
 
-
-.foo:before { 
-	content: ".";
-	width: 20px;
+#cart {
+	float: right;
 }
 
-.foo:after { 
-	content: "sdfsfsdfsdf";
-	/*width: 20px;*/
-}
+/*footer*/
 
-.foo:first-letter { 
-	color: red;
-}
-
-.foo:first-line {
-	font-style: italic;
+footer {
+    clear: both;
+    height: 150px;
+    padding: 50px 20px 0px 20px;
 }

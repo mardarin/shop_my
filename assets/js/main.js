@@ -1,19 +1,39 @@
-var i = 10;
-while(i < 10) {
-	// console.log(i);
-	i++;
-}
+var products = [
+	{
+		"title": "Phone",
+		"price": "300p"
+	},
+	{
+		"title": "iPhone",
+		"price": "200p"
+	},
+	{
+		"title": "Android",
+		"price": "250p"
+	}
+]
 
-var j = 10;
-do {
-	// console.log(j);
-	j++;
-} while(j < 10)
+$(function() {
+	$(".product-link").click(function(){
+		var id = $(this).attr("data-id");
 
-for (i = 9; i >= 0; i--) {
-	// console.log(i);
-}
+		if ($("#cart").html() == "Корзина пуста") {
+			$("#cart").html(render(products[id]))
+		} else {
+			$("#cart").append(render(products[id]))
+		}
+	})
 
-for (i = 1; i <= 10; i++) {
-	// console.log("result: " + i);
+	$("body").on("click", ".product-rm", function() {
+	  	$(this).parent().remove()
+	  	if ($(".product-rm").length == 0) {
+	  		$("#cart").html("Корзина пуста")
+	  	}
+	});
+})
+
+function render (product) {
+	var template = "<div>" + product.title + ", Цена " + product.price + " <a class='product-rm' href='javascript:{}'>удалить</a> </div>"
+
+	return template
 }
