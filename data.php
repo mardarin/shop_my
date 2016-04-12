@@ -4,6 +4,7 @@ $products = array(
 	array(
 		"title" => "Phone",
 		"price"=> "300p",
+		"category" => array("sport", "books"),
 		"img" => "http://demo.opencart.com/image/cache/catalog/demo/palm_treo_pro_1-228x228.jpg"
 	),
 	array(

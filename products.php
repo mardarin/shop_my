@@ -35,7 +35,7 @@
         <?php foreach ($products as $index => $product) { ?>
             <div class="l-grid3">
                 <div><img src="<?php echo $product["img"] ?>" alt="Alt"></div>
-                <a href="javascript:{}" class="product-link" data-id="<?php echo $index ?>">В корзину</a>
+                <a href="/add.php?id=<?php echo $index ?>" class="-product-link" data-id="<?php echo $index ?>">В корзину</a>
             </div>
         <?php } ?>
 
